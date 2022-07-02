@@ -25,7 +25,13 @@ export default NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      
+      // parametros de callback auth
+      // console.log({ user });
+      // console.log({ account });
+      // console.log({ profile });
+      // console.log({email})
+      // console.log({credentials})
+
       const { email } = user;
 
       try {
@@ -52,7 +58,7 @@ export default NextAuth({
         );
 
         return true;
-
+        
       } catch {
         return false;
       }
