@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React, { FC } from "react";
+import ActiveLink from "../ActiveLink";
 import { SignInButton } from "../SignInButton";
 // import Image from "next/image";
 
@@ -12,12 +12,12 @@ export const Header: FC = () => {
         <img src="/images/logo.svg" alt="ig.news" />
         {/* <Image src="/images/logo.svg" alt="ig.news" width={20} height={20} layout="responsive"/> */}
         <nav>
-          <Link href="/">
-            <a className={styles.active}>Home</a>
-          </Link>
-          <Link href="/posts" prefetch>
+          <ActiveLink href="/" activeClass={styles.active}>
+            <a>Home</a>
+          </ActiveLink>
+          <ActiveLink href="/posts" prefetch activeClass={styles.active}>
             <a>Posts</a>
-          </Link>
+          </ActiveLink>
         </nav>
 
         <SignInButton />
